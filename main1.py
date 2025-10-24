@@ -22,7 +22,7 @@ from lxml import etree  # For C14N canonicalization
 # Initialize with input parameters to this API
 method = "list"
 # method = "getTypeList"
-claimfile = 'MCEDT_DOWNLOAD_SAMPLES/CLAIM FILE.txt'
+claimfile = 'MCEDT_DOWNLOAD_SAMPLES/STALE DATED CLAIM FILE.txt'
 resourceID = "83351"
 
 # For list method
@@ -381,8 +381,8 @@ def sendrequest(xmlPayload: str) -> Tuple[int, str]:
     # Send request
     response = requests.post(url, data=xmlPayload.encode('utf-8'), headers=headers, verify='cacert.pem')
 
-    # Write to one.txt
-    with open('MCEDT_DOWNLOAD_SAMPLES_CLAIM FILE.xml', 'w') as httpLogFile:
+    # Write to 1_MCEDT_Upload_Files_Claim_File.xml
+    with open('5_MCEDT_DOWNLOAD_SAMPLES_STALE DATED CLAIM FILE.xml', 'w') as httpLogFile:
         # Request
         httpLogFile.write(str(response.request.headers) + '\n\n')
         httpLogFile.write(xmlPayload + '\n\n\n')

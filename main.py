@@ -310,7 +310,7 @@ def sendrequest(xmlPayload):
     server_status = response.status_code
 
     # Write request headers and payload to a log file
-    with open('one.txt', 'a') as httpLogFile:
+    with open('1_MCEDT_Upload_Files_Claim_File.xml', 'a') as httpLogFile:
         httpLogFile.write(str(response.request.headers) + '\n\n\n')
         httpLogFile.write(xmlPayload + '\n\n\n')
 
@@ -318,7 +318,7 @@ def sendrequest(xmlPayload):
     body = response.text
 
     # Append response to log file
-    with open('one.txt', 'a') as httpLogFile:
+    with open('1_MCEDT_Upload_Files_Claim_File.xml', 'a') as httpLogFile:
         httpLogFile.write(str(response.headers) + '\n\n\n')
         httpLogFile.write(body)
 

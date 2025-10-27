@@ -1,28 +1,32 @@
 
 import base64
-import binascii
 import datetime
 import hashlib
-import os
 import random
-import string
-import subprocess
-import sys
+
 import uuid
 import xml.etree.ElementTree as ET
-from io import BytesIO
-from typing import List, Tuple
+from typing import Tuple
 
 import requests
-from cryptography.hazmat.primitives import hashes, serialization
+from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from lxml import etree  # For C14N canonicalization
+from dotenv import load_dotenv
+import os
+load_dotenv("local.env")
 
 # Initialize with input parameters to this API
-method = "list"
+method = "submit"
 # method = "getTypeList"
-claimfile = 'MCEDT_DOWNLOAD_SAMPLES/STALE DATED CLAIM FILE.txt'
+directory = "MCEDT_Upload_Files"
+file_to_process="Claim_File.txt"
+claimfile = f'{directory}/{file_to_process}'
+current_number='22'
+responseFile = f'{current_number}_{directory}_{file_to_process}'
+responseFile=responseFile.replace(".txt",".xml")
+responseFile=responseFile.replace(".blob",".xml")
 resourceID = "83351"
 
 # For list method
@@ -34,12 +38,12 @@ resourceStatus = 'SUBMITTED'
 # ref pg25 moh-ohip-techspec-mcedt-ebs-v4-5-en-2023-10-18.pdf
 resourcePage = 1  # OPTIONAL can leave empty
 
-# Replace with your own conformance testing credentials
 # Scroll down to replace conformance testing key further down the code base
-MOH_ID = '619700'
-username = 'confsu+412@gmail.com'
-password = 'Password77!!'
-
+MOH_ID = os.getenv('MOH_ID')
+username = os.getenv('username')
+password = os.getenv('password')
+conformance_key=os.getenv('conformance_key')
+KEY=os.getenv('KEY')
 # Load the PKCS#12 file
 with open('teststore.p12', 'rb') as f:
     pkcs12 = f.read()
@@ -48,9 +52,6 @@ with open('teststore.p12', 'rb') as f:
 from cryptography.hazmat.primitives.serialization.pkcs12 import load_key_and_certificates
 
 private_key, certificate, _ = load_key_and_certificates(pkcs12, b'changeit')
-KEY = "MIICcjCCAdugAwIBAgIII44ODmyZSbYwDQYJKoZIhvcNAQELBQAwajELMAkGA1UEBhMCQ0ExEDAOBgNVBAgTB09udGFyaW8xFDASBgNVBAcTC1NjYXJib3JvdWdoMQswCQYDVQQKEwJORDESMBAGA1UECxMJTkQgSGVhbHRoMRIwEAYDVQQDEwlORCBIZWFsdGgwHhcNMjUxMDI0MTcwNTIxWhcNNDUxMDE5MTcwNTIxWjBqMQswCQYDVQQGEwJDQTEQMA4GA1UECBMHT250YXJpbzEUMBIGA1UEBxMLU2NhcmJvcm91Z2gxCzAJBgNVBAoTAk5EMRIwEAYDVQQLEwlORCBIZWFsdGgxEjAQBgNVBAMTCU5EIEhlYWx0aDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAj4e/WyqYdREUvX2vlKZw9dxxOdKtjfKeqD3xf203SzWPU7KEzcJEgkLSPySzTHxoQf8irviPkBbDR4lEIn3uGHvOMVme3IPWPzBOLuLgvKkU+wGtOLzVmUtM4XvPnYtBLMBtXfb6xnSdp+3FBrn4+cTDMJOHAc6zuUM+hM5jH8MCAwEAAaMhMB8wHQYDVR0OBBYEFNVbLyOE9SSH+E4Ti2bzeuBToiSLMA0GCSqGSIb3DQEBCwUAA4GBACjA4NQYae6yUsW0OxWf+fqeI0r9pt60BOUoDBGEqh292XDQvSUpB1n5zYhbk7xEoKJ6N3tOhfvS7bkWdMEhc59MyC+OmUfcTbVWMURiyJmpDLkts1Y4Q7g8lj2NvwDjkGYYmH2K67c/5SSaGe4yEnthI9UdSQPQ99w2ysU7fTQ8"
-# In replit functions can be collapsed. collapsing all functions will help you get a sense of the structure.
-# first a number of functions defined to build different parts of the xml request. then all the parts are put together in loadxmltemplate()
 
 def loadbody() -> str:
     global method, claimfile, resourceID, resourceType, resourceStatus, resourcePage
@@ -75,19 +76,21 @@ def loadbody() -> str:
         """
     elif method == 'upload':
         rawbody = f"""
-    <soapenv:Body wsu:Id="id-5">
-      <edt:upload>
-         <!--1 to 5 repetitions:-->
-         <upload>
-            <content>
-              <inc:Include href="cid:{claimfile}" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
-            </content>
-            <!--Optional:-->
-            <description>{claimfile}</description>
-            <resourceType>CL</resourceType>
-         </upload>
-      </edt:upload>
-    </soapenv:Body>
+            <soapenv:Body wsu:Id="id-5">
+            
+              <edt:upload>
+              
+                 <!--1 to 5 repetitions:-->
+                 <upload>
+                    <content>
+                      <inc:Include href="cid:{claimfile}" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                    </content>
+                    <!--Optional:-->
+                    <description>{claimfile}</description>
+                    <resourceType>{resourceType}</resourceType>
+                 </upload>
+              </edt:upload>
+            </soapenv:Body>
         """
     elif method == 'update':
         rawbody = f"""
@@ -144,25 +147,19 @@ def loadUsernameToken(username: str, password: str) -> str:
     return usernameToken.strip()
 
 def loadIDP(MOH_ID: str) -> str:
-    # IDP model is used, not MSA model. reference moh-tech-spec-electronic-business-services-en-2023-06-12.pdf page 10
-    # The trusted external identity provider is referring to GoSecure at https://www.edt.health.gov.on.ca All doctors in Ontario get a username and password to GoSecure when they get licensed. Thus credentials to logging into GoSecure is considered high trust and a user there has rights to access patient health information.
     IDP = f"""
   <idp:IDP wsu:Id="id-3">
     <ServiceUserMUID>{MOH_ID}</ServiceUserMUID>
   </idp:IDP>
     """
-    # per FAQ word document provided by MOH, serviceUserMUID is the same as MOH ID
     return IDP.strip()
 
 def loadEBS() -> str:
-    # generate uuid without external library because my server doesn't have composer
     audit_id = str(uuid.uuid4())
 
-    # hardcode conformance key here, as it will be permanent
-    # auditId is an arbitrary random unique ID sent with each request to identify each request. To pass ministry of health's conformance testing you must prove you can receive correct responses from the web service and the government team can verify against server log that you indeed sent the correct request identified by the AuditId.
     EBS = f"""
   <ebs:EBS wsu:Id="id-4">
-      <SoftwareConformanceKey>0da8cda1-db02-4b8b-9425-f6e42c2548fa</SoftwareConformanceKey>
+      <SoftwareConformanceKey>{conformance_key}</SoftwareConformanceKey>
       <AuditId>{audit_id}</AuditId>
   </ebs:EBS>
     """
@@ -382,7 +379,7 @@ def sendrequest(xmlPayload: str) -> Tuple[int, str]:
     response = requests.post(url, data=xmlPayload.encode('utf-8'), headers=headers, verify='cacert.pem')
 
     # Write to 1_MCEDT_Upload_Files_Claim_File.xml
-    with open('5_MCEDT_DOWNLOAD_SAMPLES_STALE DATED CLAIM FILE.xml', 'w') as httpLogFile:
+    with open(responseFile, 'w') as httpLogFile:
         # Request
         httpLogFile.write(str(response.request.headers) + '\n\n')
         httpLogFile.write(xmlPayload + '\n\n\n')

@@ -18,28 +18,28 @@ import os
 load_dotenv("local.env")
 
 # Initialize with input parameters to this API
-method = "info"
+method = "update"
 # method = "getTypeList"
-directory = "MCEDT_DOWNLOAD_SAMPLES"
-file_to_process1="CLAIM FILE.txt"
+directory = "MCEDT_Upload_Files"
+file_to_process1="HJBAC8.005"
 claimfile = f'{directory}/{file_to_process1}'
-current_number='8.2'
+current_number='7.4'
 responseFile = f'results/{current_number}_{directory}_{file_to_process1}'
 responseFile=responseFile.replace(".txt",".xml")
 responseFile=responseFile.replace(".blob",".xml")
 responseFile=responseFile.replace(file_to_process1.split(".")[1],".xml")
-resourceID = "90242"
-resourceID2 = "90248"
-resourceID3 = "95653"
-resourceID4 = "95654"
-resourceID5 = "95655"
+resourceID  = "91457"
+resourceID2 = "95668"
+resourceID3 = "95667"
+resourceID4 = "95664"
+resourceID5 = "95527"
 resourceID6 = "95656"
 resourceID7 = "95657"
 
-file_to_process2="2_OBECE.TXT"
-file_to_process3="3_OBECE.TXT"
-file_to_process4="4_OBECE.TXT"
-file_to_process5="5_OBECE.TXT"
+file_to_process2="large_claim_file_vendor.txt"
+file_to_process3="MOH_LARGE_CLAIMS.TXT"
+file_to_process4="HGBAC8.001"
+file_to_process5="HJBAC8.005"
 file_to_process6="6_OBECE.TXT"
 claimfile2 = f'{directory}/{file_to_process2}'
 claimfile3 = f'{directory}/{file_to_process3}'
@@ -48,7 +48,7 @@ claimfile5 = f'{directory}/{file_to_process5}'
 claimfile6 = f'{directory}/{file_to_process6}'
 
 # For list method
-resourceType = 'CL'  # OPTIONAL can leave empty
+resourceType = 'OB'  # OPTIONAL can leave empty
 # CL, BE, ER, ES, RA, RS, PSP, GCM
 # ref getTypeList method's server response
 resourceStatus = 'UPLOADED'
@@ -123,6 +123,31 @@ def loadbody() -> str:
                 </content>
                 <resourceID>{resourceID}</resourceID>
              </updates>
+              <updates>
+                <content>
+                    <inc:Include href="cid:{claimfile2}" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                </content>
+                <resourceID>{resourceID2}</resourceID>
+             </updates>
+              <updates>
+                <content>
+                    <inc:Include href="cid:{claimfile3}" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                </content>
+                <resourceID>{resourceID3}</resourceID>
+             </updates>
+              <updates>
+                <content>
+                    <inc:Include href="cid:{claimfile4}" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                </content>
+                <resourceID>{resourceID4}</resourceID>
+             </updates>
+              <updates>
+                <content>
+                    <inc:Include href="cid:{claimfile5}" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                </content>
+                <resourceID>{resourceID5}</resourceID>
+             </updates>
+             
              
           </edt:update>
          </soapenv:Body>
@@ -133,6 +158,10 @@ def loadbody() -> str:
             <edt:{method}>
                <!--1 to 100 repetitions:-->
                <resourceIDs>{resourceID}</resourceIDs>
+               <resourceIDs>{resourceID2}</resourceIDs>
+               <resourceIDs>{resourceID3}</resourceIDs>
+               <resourceIDs>{resourceID4}</resourceIDs>
+               <resourceIDs>{resourceID5}</resourceIDs>
             </edt:{method}>
          </soapenv:Body>
         """

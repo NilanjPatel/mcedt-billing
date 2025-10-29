@@ -18,22 +18,40 @@ import os
 load_dotenv("local.env")
 
 # Initialize with input parameters to this API
-method = "submit"
+method = "info"
 # method = "getTypeList"
-directory = "MCEDT_Upload_Files"
-file_to_process="Claim_File.txt"
-claimfile = f'{directory}/{file_to_process}'
-current_number='22'
-responseFile = f'{current_number}_{directory}_{file_to_process}'
+directory = "MCEDT_DOWNLOAD_SAMPLES"
+file_to_process1="CLAIM FILE.txt"
+claimfile = f'{directory}/{file_to_process1}'
+current_number='8.2'
+responseFile = f'results/{current_number}_{directory}_{file_to_process1}'
 responseFile=responseFile.replace(".txt",".xml")
 responseFile=responseFile.replace(".blob",".xml")
-resourceID = "83351"
+responseFile=responseFile.replace(file_to_process1.split(".")[1],".xml")
+resourceID = "90242"
+resourceID2 = "90248"
+resourceID3 = "95653"
+resourceID4 = "95654"
+resourceID5 = "95655"
+resourceID6 = "95656"
+resourceID7 = "95657"
+
+file_to_process2="2_OBECE.TXT"
+file_to_process3="3_OBECE.TXT"
+file_to_process4="4_OBECE.TXT"
+file_to_process5="5_OBECE.TXT"
+file_to_process6="6_OBECE.TXT"
+claimfile2 = f'{directory}/{file_to_process2}'
+claimfile3 = f'{directory}/{file_to_process3}'
+claimfile4 = f'{directory}/{file_to_process4}'
+claimfile5 = f'{directory}/{file_to_process5}'
+claimfile6 = f'{directory}/{file_to_process6}'
 
 # For list method
 resourceType = 'CL'  # OPTIONAL can leave empty
 # CL, BE, ER, ES, RA, RS, PSP, GCM
 # ref getTypeList method's server response
-resourceStatus = 'SUBMITTED'
+resourceStatus = 'UPLOADED'
 # UPLOADED, SUBMITTED, WIP, DOWNLOADABLE, APPROVED, DENIED
 # ref pg25 moh-ohip-techspec-mcedt-ebs-v4-5-en-2023-10-18.pdf
 resourcePage = 1  # OPTIONAL can leave empty
@@ -89,6 +107,8 @@ def loadbody() -> str:
                     <description>{claimfile}</description>
                     <resourceType>{resourceType}</resourceType>
                  </upload>
+
+            
               </edt:upload>
             </soapenv:Body>
         """
@@ -99,10 +119,11 @@ def loadbody() -> str:
              <!--1 to 5 repetitions:-->
              <updates>
                 <content>
-        <inc:Include href="cid:{claimfile}" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                    <inc:Include href="cid:{claimfile}" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
                 </content>
                 <resourceID>{resourceID}</resourceID>
              </updates>
+             
           </edt:update>
          </soapenv:Body>
         """

@@ -18,12 +18,12 @@ import os
 load_dotenv("local.env")
 
 # Initialize with input parameters to this API
-method = "update"
+method = "upload"
 # method = "getTypeList"
 directory = "MCEDT_Upload_Files"
-file_to_process1="HJBAC8.005"
+file_to_process1="1_OBECE.TXT"
 claimfile = f'{directory}/{file_to_process1}'
-current_number='7.4'
+current_number='1.10'
 responseFile = f'results/{current_number}_{directory}_{file_to_process1}'
 responseFile=responseFile.replace(".txt",".xml")
 responseFile=responseFile.replace(".blob",".xml")

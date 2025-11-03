@@ -1,0 +1,467 @@
+{'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'multipart/related; type="application/xop+xml"; start="<rootpart@soapui.org>"; start-info="text/xml"; boundary="----=Boundary_1d3b18e8d24766a8fe91ebf05102ca7b"', 'MIME-Version': '1.0', 'Content-Length': '32760'}
+
+------=Boundary_1d3b18e8d24766a8fe91ebf05102ca7b
+Content-Type: application/xop+xml; charset=UTF-8; type="text/xml"
+Content-Transfer-Encoding: 8bit
+Content-ID: <rootpart@soapui.org>
+
+<soapenv:Envelope
+xmlns:ebs="http://ebs.health.ontario.ca/"
+xmlns:edt="http://edt.health.ontario.ca/"
+xmlns:idp="http://idp.ebs.health.ontario.ca/"
+xmlns:msa="http://msa.ebs.health.ontario.ca/"
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+<soapenv:Header>
+<wsse:Security
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+<wsse:BinarySecurityToken EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" wsu:Id="X509-4A6564966742022D8B170319672914254">MIICcjCCAdugAwIBAgIII44ODmyZSbYwDQYJKoZIhvcNAQELBQAwajELMAkGA1UEBhMCQ0ExEDAOBgNVBAgTB09udGFyaW8xFDASBgNVBAcTC1NjYXJib3JvdWdoMQswCQYDVQQKEwJORDESMBAGA1UECxMJTkQgSGVhbHRoMRIwEAYDVQQDEwlORCBIZWFsdGgwHhcNMjUxMDI0MTcwNTIxWhcNNDUxMDE5MTcwNTIxWjBqMQswCQYDVQQGEwJDQTEQMA4GA1UECBMHT250YXJpbzEUMBIGA1UEBxMLU2NhcmJvcm91Z2gxCzAJBgNVBAoTAk5EMRIwEAYDVQQLEwlORCBIZWFsdGgxEjAQBgNVBAMTCU5EIEhlYWx0aDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAj4e/WyqYdREUvX2vlKZw9dxxOdKtjfKeqD3xf203SzWPU7KEzcJEgkLSPySzTHxoQf8irviPkBbDR4lEIn3uGHvOMVme3IPWPzBOLuLgvKkU+wGtOLzVmUtM4XvPnYtBLMBtXfb6xnSdp+3FBrn4+cTDMJOHAc6zuUM+hM5jH8MCAwEAAaMhMB8wHQYDVR0OBBYEFNVbLyOE9SSH+E4Ti2bzeuBToiSLMA0GCSqGSIb3DQEBCwUAA4GBACjA4NQYae6yUsW0OxWf+fqeI0r9pt60BOUoDBGEqh292XDQvSUpB1n5zYhbk7xEoKJ6N3tOhfvS7bkWdMEhc59MyC+OmUfcTbVWMURiyJmpDLkts1Y4Q7g8lj2NvwDjkGYYmH2K67c/5SSaGe4yEnthI9UdSQPQ99w2ysU7fTQ8</wsse:BinarySecurityToken>
+<wsse:UsernameToken wsu:Id="UsernameToken-2">
+      <wsse:Username>confsu+412@gmail.com</wsse:Username>
+      <wsse:Password 
+      Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Password77!!</wsse:Password>
+  </wsse:UsernameToken>
+<wsu:Timestamp wsu:Id="TS-1">
+    <wsu:Created>2025-10-30T18:38:44.067Z</wsu:Created>
+    <wsu:Expires>2025-10-30T18:48:44.067Z</wsu:Expires>
+  </wsu:Timestamp>
+<ds:Signature Id="SIG-6" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:SignedInfo>
+  <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+    <ec:InclusiveNamespaces PrefixList="ebs edt idp msa soapenv wsu"
+    xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+  </ds:CanonicalizationMethod>
+  <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <ds:Reference URI="#TS-1">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="ebs edt idp msa"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>ql0oOftaJGELRHUSjyWaly7c6PwbvvIaE8BbJ5L2sRY=</ds:DigestValue>
+  </ds:Reference>
+  <ds:Reference URI="#UsernameToken-2">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="wsse ebs edt idp msa soapenv"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>Rn6yTC7jF3t4QrjN4Ku7AtrLiUvSAcdwh0vU3TVXDrg=</ds:DigestValue>
+  </ds:Reference>
+  <ds:Reference URI="#id-3">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="ebs edt msa soapenv"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>meWQPEb39hYJX27CIqMer4XRkCI1V8bxHlcyCDqAjrA=</ds:DigestValue>
+  </ds:Reference>
+  <ds:Reference URI="#id-4">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="edt idp msa soapenv"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>H56v66JCy+H0i/JNMPugsjwpVTJ8oB2Fn/oPtUKzboU=</ds:DigestValue>
+  </ds:Reference>
+  <ds:Reference URI="#id-5">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="ebs edt idp msa soapenv"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>Cg08S17HWIy4kqk9MnRNBhp4ak8wIA99OxL8bh5T+zs=</ds:DigestValue>
+  </ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+KJOayiJeBuL4LdQko8pHnYwevJKYmJjWvT24vafwcwiQPm+deJ0YFRhhQi/uqJqNHY8qz6o0cTbCIUZwoSwJs8KndifMmRPdW1axf936+XEoyC9bGBOxE10Wi5r5OvxRgr1uOhU9v+YFfwkTTI97GDsM9HP/HVw56ucxGyjt1jI=
+</ds:SignatureValue>
+<ds:KeyInfo Id="KI-4A6564966742022D8B170319672914255">
+  <wsse:SecurityTokenReference wsu:Id="STR-4A6564966742022D8B170319672914256">
+    <wsse:Reference URI="#X509-4A6564966742022D8B170319672914254" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"/>
+  </wsse:SecurityTokenReference>
+</ds:KeyInfo>
+</ds:Signature>
+</wsse:Security>
+<idp:IDP wsu:Id="id-3">
+    <ServiceUserMUID>001CF</ServiceUserMUID>
+  </idp:IDP>
+<ebs:EBS wsu:Id="id-4">
+      <SoftwareConformanceKey>0da8cda1-db02-4b8b-9425-f6e42c2548fa</SoftwareConformanceKey>
+      <AuditId>15f22d3c-9764-4380-b611-87002c1dd684</AuditId>
+  </ebs:EBS>
+</soapenv:Header>
+<soapenv:Body wsu:Id="id-5">
+          <edt:update>
+             <!--1 to 5 repetitions:-->
+             <updates>
+                <content>
+                    <inc:Include href="cid:MCEDT_Upload_Files/HJ2537.004" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                </content>
+                <resourceID>95724</resourceID>
+             </updates>
+
+             
+             
+          </edt:update>
+         </soapenv:Body>
+</soapenv:Envelope>
+------=Boundary_1d3b18e8d24766a8fe91ebf05102ca7b
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Content-ID: <MCEDT_Upload_Files/HJ2537.004>
+Content-Disposition: attachment;   name="MCEDT_Upload_Files/HJ2537.004"
+
+HEBV03F202510200001      253703726200                                          
+HEH2388400174RE1996061800393799HCPP                                            
+HETK013A  0070100120250708780                                                  
+HEH7171425577WD2025053000393800HCPP                                            
+HETA007A  0037950120250715690                                                  
+HETK301A  0000000120250715690                                                  
+HEH7171425577WD2025053000393803HCPP                                            
+HETA007A  0037950120250721216                                                  
+HEH5429941171VL1971102600393911HCPP                                            
+HETA007A  0037950120250729829                                                  
+HEH8967964647WK1991111200393914HCPP                                            
+HETA007A  0037950120250731180                                                  
+HETG365A  0012000120250731180                                                  
+HETE430A  0011950120250731180                                                  
+HEH4517828952LG2007071600393915HCPP                                            
+HETA007A  0037950120250731313                                                  
+HEH8066524789YJ1994071500394034HCPP                                            
+HETA007A  0037950120251020650                                                  
+HETK301A  0000000120251020650                                                  
+HEH5559690523FF1981071400394033HCPP                                            
+HETA003A  0087350120251020628                                                  
+HEH7691305440TC2016100800394028HCPP                                            
+HETA007A  0037950120251020824                                                  
+HEH5264779066JV1989040600394038HCPP                                            
+HETA007A  0037950120251020460                                                  
+HEE0010000000014                                                               HEBV03F202510200003      253703428800                                          
+HEH4449743246YH1993060200393779HCPP                                            
+HETK013A  0070100120251018460                                                  
+HEH6300817365XT1999022800393780HCPP                                            
+HETA007A  0037950120251018034                                                  
+HEH8257844251RE2018032100393777HCPP                                            
+HETK013A  0070100120251018314                                                  
+HEH6401157562TK1983122700393819HCPP                                            
+HETK013A  0070100120251018232                                                  
+HEE0004000000004                                                               HEBV03F202510200004      253704755900                                          
+HEH5736739300BR1992092300393953HCPP                                            
+HETA007A  00379501202510202221                                                 
+HEH6070530644AF1996082400394081HCPP                                            
+HETA003A  0087350120251020785                                                  
+HEH9707466224YC1976081100393969HCPP                                            
+HETA007A  0037950120251020785                                                  
+HEH1355012608DM1969101100394085HCPP                                            
+HETA007A  0037950120251020977                                                  
+HEH6137041239HL2024110800394011HCPP                                            
+HETK013A  0070100120251020460                                                  
+HEH4251347920TR1997030900394082HCPP                                            
+HETA007A  0037950120251020845                                                  
+HEE0006000000006                                                               HEBV03F202510200007      253705546500                                          
+HEH3311028447LJ1997111500393862HCPP                                            
+HETK013A  0070100120251017269                                                  
+HEH9526412177EW1989051500393863HCPP                                            
+HETA007A  0037950120251017218                                                  
+HEH5735861808BG1996041500393864HCPP                                            
+HETA007A  0037950120251017896                                                  
+HETG848A  0005400120251017896                                                  
+HETG842A  0005400120251017896                                                  
+HEH6351222945WK1981060300393865HCPP                                            
+HETA007A  0037950120251017401                                                  
+HEH9386317672RE2018062500393866HCPP                                            
+HETK013A  0070100120251017140                                                  
+HEH2900394889CB1997050200393867HCPP                                            
+HETK013A  0070100120251017808                                                  
+HEH4821851385GM2002071100393868HCPP                                            
+HETK013A  0070100120251017009                                                  
+HEH1819806728MH1992072200393869HCPP                                            
+HETA007A  0037950120251017780                                                  
+HEH6099373323BX1992110600393870HCPP                                            
+HETK131A  0056950120251017536                                                  
+HEH8197446969EG2001053000393871HCPP                                            
+HETK013A  0070100120251017280                                                  
+HEH2012529307JW1968052300393872HCPP                                            
+HETA007A  0037950120251017149                                                  
+HEH6982579978EB2025041400393873HCPP                                            
+HETA007A  0037950120251017896                                                  
+HETG841A  0006350120251017896                                                  
+HEH6510403063XA1949010100393879HCPP                                            
+HETA007A  0037950120251017786                                                  
+HEH9483038361AC2000071400393880HCPP                                            
+HETA007A  0037950120251017373                                                  
+HEH1297404764MW2000041500393881HCPP                                            
+HETA007A  0037950120251017708                                                  
+HETG202A  0004450120251017708                                                  
+HEH4860820663KX1990051000393882HCPP                                            
+HETA007A  0037950120251017895                                                  
+HETG552A  0020000120251017895                                                  
+HEH2742591460RY1994022000393883HCPP                                            
+HETA007A  0037950120251017786                                                  
+HEH6729928231JN1968061000393884HCPP                                            
+HETA007A  0037950120251017388                                                  
+HEH9177628378VC1941042000393885HCPP                                            
+HETA007A  0037950120251017232                                                  
+HETG590A  0005650120251017232                                                  
+HEH6536964494GF1997120300393886HCPP                                            
+HETA003A  0087350120251017832                                                  
+HEH2937933303JP1990100500393887HCPP                                            
+HETA007A  0037950120251017786                                                  
+HEH9489925488EH1994100200393890HCPP                                            
+HETA007A  0037950120251017179                                                  
+HEH2243566102GA1978061600393891HCPP                                            
+HETA007A  0037950120251017460                                                  
+HETG590A  0005650120251017460                                                  
+HETG847A  0005400120251017460                                                  
+HEH7799883793HE2006040400393893HCPP                                            
+HETK013A  0070100120251017683                                                  
+HEH8960263161FR1998072900393894HCPP                                            
+HETA007A  0037950120251017184                                                  
+HEH5906059794KG2011022500393895HCPP                                            
+HETA007A  0037950120251017896                                                  
+HETG372A  0003890120251017896                                                  
+HETG847A  0005400120251017896                                                  
+HEH8672066373NT2025041900393896HCPP                                            
+HETK013A  0070100120251017009                                                  
+HEH5920898698KC2009030500393898HCPP                                            
+HETA007A  0037950120251017708                                                  
+HETG202A  0004450120251017708                                                  
+HEH3463609564PY1985081600393899HCPP                                            
+HETK013A  0070100120251017269                                                  
+HEH3568593853ED1952071000393900HCPP                                            
+HETA007A  0037950120251017184                                                  
+HEH9200030188AH1986050900393902HCPP                                            
+HETA007A  0037950120251017834                                                  
+HEH7087396060CX1997040800393903HCPP                                            
+HETK131A  0056950120251017                                                     
+HEH5449843068KN1991072000393904HCPP                                            
+HETK013A  0070100120251017401                                                  
+HEH2531507495EB1974062400393905HCPP                                            
+HETA007A  0037950120251017184                                                  
+HEE0034000000045                                                               HEBV03F202510200008      253705113800                                          
+HEH3109297881VY1947040200393965HCPP                                            
+HETA007A  0037950120251020269                                                  
+HETG372A  0003890120251020269                                                  
+HEH5897225842BN1997021800393974HCPP                                            
+HETA003A  0087350120251020799                                                  
+HEH8791658027HJ1962060600394049HCPP                                            
+HETA007A  00379501202510202334                                                 
+HEH4151096320VT1976120800393970HCPP                                            
+HETA007A  0037950120251020715                                                  
+HEH5508701207EE1995091600393997HCPP                                            
+HETK131A  0056950120251020917                                                  
+HEH1928097615VW1943072100394006HCPP                                            
+HETA007A  0037950120251020460                                                  
+HEH4417605401GT2001082900394004HCPP                                            
+HETA007A  0037950120251020567                                                  
+HEH8672095695AD1958083000394022HCPP                                            
+HETA007A  0037950120251020413                                                  
+HEH7188636943JY1991120600394023HCPP                                            
+HETA003A  0087350120251020787                                                  
+HEH5481077344JA1995011100394035HCPP                                            
+HETA007A  0037950120251020895                                                  
+HEH6187712283NF1998082900394078HCPP                                            
+HETA003A  0087350120251020799                                                  
+HEH4653144743XF1997020200394072HCPP                                            
+HETK013A  0070100120251020895                                                  
+HEH1155387127NC1995081400394075HCPP                                            
+HETA007A  0037950120251020460                                                  
+HEH5514172567WR1992080100394091HCPP                                            
+HETK131A  0056950120251020917                                                  
+HEH5336127096EK1995012400394119HCPP                                            
+HETA003A  0087350120251020626                                                  
+HEH5790507643YH2008101800394094HCPP                                            
+HETA007A  0037950120251020896                                                  
+HETG590A  0005650120251020896                                                  
+HEH7723727900VG2007101700394115HCPP                                            
+HETA007A  0037950120251020896                                                  
+HETG590A  0005650120251020896                                                  
+HEH9515833193KA2016033100394113HCPP                                            
+HETA007A  0037950120251020896                                                  
+HETG590A  0005650120251020896                                                  
+HEH9200030188AH1986050900394133HCPP                                            
+HETA007A  0037950120251020834                                                  
+HEH7900660148FJ1991031800394135HCPP                                            
+HETA001A  0023750120251020078                                                  
+HETZ117A  0011650120251020078                                                  
+HEH7604491303ET1999082300394138HCPP                                            
+HETK013A  0070100120251020244                                                  
+HEH4125599664BD1996060500394139HCPP                                            
+HETA003A  0087350120251020650                                                  
+HEE0022000000027                                                               HEBV03F202510200009      253704409300                                          
+HEH9667438205AE1970121100393946HCPP                                            
+HETK013A  00701001202507022443                                                 
+HEH2777027554CH1957091800394100HCPP                                            
+HETK132A  0080950120250702401                                                  
+HEH6012884166BE1991111300393975HCPP                                            
+HETE079A  0015550120250703895                                                  
+HETK013A  0070100120250703895                                                  
+HEH6631630131DC1975113000394101HCPP                                            
+HETA007A  00379501202507042396                                                 
+HEH6605449484HK1977021300393959HCPP                                            
+HETA007A  0037950120250704626                                                  
+HETG365A  0012000120250704626                                                  
+HETE430A  0011950120250704626                                                  
+HEH5844659168JA1985021900393875HCPP                                            
+HETA007A  00379501202507042299                                                 
+HEH5598830239KM1955071500393990HCPP                                            
+HETA007A  0037950120250708272                                                  
+HETG538A  0005800120250708272                                                  
+HEH4312077201EH1992052900393994HCPP                                            
+HETK131A  0056950120250708530                                                  
+HEH8482277764MY2014021000393907HCPP                                            
+HETA007A  0037950120250708734                                                  
+HEH6582461726VW1986030300394001HCPP                                            
+HETG365A  0012000120250708193                                                  
+HETE430A  0011950120250708193                                                  
+HETK131A  0056950120250708193                                                  
+HEH4903927905XN1954111000394008HCPP                                            
+HETK005A  0070100120250709311                                                  
+HEH3442853267GD1995101700394012HCPP                                            
+HETA007A  0037950120250709626                                                  
+HEH6890610303EK2005092300394015HCPP                                            
+HETA007A  0037950120250709626                                                  
+HEH7800588209LA1977090700394020HCPP                                            
+HETA007A  0037950120250709280                                                  
+HETK301A  0000000120250709280                                                  
+HEH5990563370VX2002091700394027HCPP                                            
+HETK005A  0070100120250710300                                                  
+HEH9977144311KL1964083100393852HCPP                                            
+HETA001A  0023750120250712845                                                  
+HEH3905210906DE1960020900393854HCPP                                            
+HETG538A  0005800120250712734                                                  
+HETK132A  0080950120250712734                                                  
+HEH2283993893CN2025061000394039HCPP                                            
+HETA007A  0037950120250712916                                                  
+HEH5364189760LW1984021900394106HCPP                                            
+HETA007A  0037950120250712401                                                  
+HEH6631630131DC1975113000394108HCPP                                            
+HETK301A  00000001202507152396                                                 
+HETA001A  00237501202507152396                                                 
+HEH6631630131DC1975113000394109HCPP                                            
+HETK301A  00000001202507172396                                                 
+HETA001A  00237501202507172396                                                 
+HEH3459420265CB1973051900394047HCPP                                            
+HETK131A  0056950120250718401                                                  
+HEH5449734580DK1980101400394077HCPP                                            
+HETA007A  0037950120250722272                                                  
+HEH4903927905XN1954111000394088HCPP                                            
+HETA007A  0037950120250722845                                                  
+HEH6012884166BE1991111300393982HCPP                                            
+HETK039A  0033450120250722305                                                  
+HEH3905210906DE1960020900393972HCPP                                            
+HETA007A  0037950120250722401                                                  
+HEH4320676937RC2025030100393830HCPP                                            
+HETG840A  0005400120250723916                                                  
+HETG846A  0005400120250723916                                                  
+HETA007A  0037950120250723916                                                  
+HEH2777027554CH1957091800394112HCPP                                            
+HETA007A  0037950120250723599                                                  
+HEH7802981824EV1956010100394068HCPP                                            
+HETG365A  0012000120250724250                                                  
+HETE430A  0011950120250724250                                                  
+HETK132A  0080950120250724250                                                  
+HEH5434648993BR2024012700393838HCPP                                            
+HETG841A  0006350120250725916                                                  
+HETA002A  0062200120250725916                                                  
+HEH3459420265CB1973051900394118HCPP                                            
+HETA007A  0037950120250725573                                                  
+HETG538A  0005800120250725573                                                  
+HEH6605449484HK1977021300393961HCPP                                            
+HETA007A  00379501202507252299                                                 
+HEH4336298098TK1986092900394120HCPP                                            
+HETK013A  0070100120250725895                                                  
+HEH9300638542DD1986092900394051HCPP                                            
+HETA001A  0023750120250726737                                                  
+HEH5990563370VX2002091700394057HCPP                                            
+HETA001A  0023750120250729610                                                  
+HEH3413941414BY2025071300394062HCPP                                            
+HETA007A  0037950120250729779                                                  
+HEH7958914868VC1992022200393842HCPP                                            
+HETK013A  0070100120250730895                                                  
+HEH9337704820WB1957050100393849HCPP                                            
+HETK013A  00701001202507302443                                                 
+HEH3459420265CB1973051900394054HCPP                                            
+HETA007A  0037950120250731787                                                  
+HEH1657999460TT1998051500394128HCPP                                            
+HETA001A  0023750120250731896                                                  
+HEH9337704820WB1957050100393850HCPP                                            
+HETK132A  00809501202508022443                                                 
+HEH5598830239KM1955071500393991HCPP                                            
+HETA007A  0037950120250806799                                                  
+HEH6012884166BE1991111300393981HCPP                                            
+HETK039A  0033450120250819305                                                  
+HEH8482277764MY2014021000393906HCPP                                            
+HETA007A  0037950120250826786                                                  
+HEH9337704820WB1957050100393859HCPP                                            
+HETA007A  0037950120250904272                                                  
+HEH9337704820WB1957050100393860HCPP                                            
+HETA007A  0037950120250916380                                                  
+HEH4320676937RC2025030100393829HCPP                                            
+HETG840A  0005400120251007916                                                  
+HETA007A  0037950120251007916                                                  
+HEH7903645070MF2024072800393833HCPP                                            
+HETA007A  0037950120251017799                                                  
+HEE0048000000065                                                               HEBV03F202510200011      253704652900                                          
+HEH8321508668BN2004090200393956HCPP                                            
+HETA007A  0037950120250718704                                                  
+HEH3583817717MN2025013100393807HCPP                                            
+HETA007A  0037950120250723799                                                  
+HETK301A  0000000120250723799                                                  
+HEH9333656222JV2004101600393808HCPP                                            
+HETG212A  0009750120250723477                                                  
+HETG202A  0004450120250723477                                                  
+HEH8272560791CM2025030200393811HCPP                                            
+HETK013A  0070100120250723916                                                  
+HETG840A  0005400120250723916                                                  
+HETG846A  0005400120250723916                                                  
+HEH4266572280ND1976121300393925HCPP                                            
+HETA007A  0037950120250724180                                                  
+HETG365A  0012000120250724180                                                  
+HETE430A  0011950120250724180                                                  
+HEH7182513379FE1999092900393941HCPP                                            
+HETK005A  0070100120250730296                                                  
+HEH5967452086ND1978061200393985HCPP                                            
+HETA007A  0037950120251020460                                                  
+HETK301A  0000000120251020460                                                  
+HEH3917857140VP1996071600394137HCPP                                            
+HETA007A  0037950120251020382                                                  
+HEE0008000000015                                                               
+
+------=Boundary_1d3b18e8d24766a8fe91ebf05102ca7b--
+
+
+{'X-Backside-Transport': 'OK OK,OK OK', 'Connection': 'Keep-Alive', 'Transfer-Encoding': 'chunked', 'X-Powered-By': 'Servlet/3.0', 'Content-Type': 'text/xml', 'Content-Language': 'en-CA', 'Date': 'Thu, 30 Oct 2025 18:38:43 GMT', 'X-Global-Transaction-ID': '14acb7776903b0b411e4992f'}
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><xenc:EncryptedKey xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"><xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-1_5" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"/><dsig:KeyInfo xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><wsse:SecurityTokenReference><wsse:KeyIdentifier ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509SubjectKeyIdentifier" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">1VsvI4T1JIf4ThOLZvN64FOiJIs=</wsse:KeyIdentifier></wsse:SecurityTokenReference></dsig:KeyInfo><xenc:CipherData xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><xenc:CipherValue>T+yO0diK9o/EhmpurA0HBY0n0K9PvbVHMmccOpgGomwwksiwI5OtXIvvWzEXghkfdQX4SiqCuhWnRZBOJvF5rTPWcGlNp9VhO/uQGilgE8hFSCjtzrVcA3OHNBVXiHZaAa0s+H951KXj6U8HkMpVssjROwtepAOpFcotsPX/DGE=</xenc:CipherValue></xenc:CipherData><xenc:ReferenceList><xenc:DataReference URI="#G0x7f79ea188320-46D"/></xenc:ReferenceList></xenc:EncryptedKey><wsu:Timestamp wsu:Id="Timestamp-19f992c4-f4c8-49c8-843e-77b7ac14033b" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><wsu:Created>2025-10-30T18:38:44Z</wsu:Created><wsu:Expires>2025-10-30T18:43:44Z</wsu:Expires></wsu:Timestamp><wsse:BinarySecurityToken wsu:Id="SecurityToken-c2c21702-6a35-4b37-a7fc-77b7ac14600f" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">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</wsse:BinarySecurityToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+  <Reference URI="#Timestamp-19f992c4-f4c8-49c8-843e-77b7ac14033b">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>Nt7W/6xZBgKbh+QHQJG9fi4xeQY=</DigestValue>
+  </Reference>
+  <Reference URI="#Body-1914356d-0bf8-45dd-b2a6-77b7ac146dd9">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>p3XglYppNxEGf6fqOugXketnvF4=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>G9jWSrX0q+noITlozTqp+pyVrGtUw2pdzpmMiOcbU+H6lExk89bWBeD7q3CmQwjd7g9+2OW2EHsmmzWjm1bDMSKiAMUVxHR0InzW9Ean/4tWgg02TLE7FLOP9C6YCWp2nToiRITz4uHp+OyOOZMImNCSszki+l8+mwVUsVzbnVw8Wlq1FG4/77PygVRVEjmVWfa0lyrUuEgkgr6XPtGC9cep0nroH5N5UVJLFcIHjAsguAYlMbAuS1Bv2Rc1YFehYgbym2owoddsvV3nyDBgBKvZZHD0dtE3BAIzfcI18qnhgUD6ePUcVV/zbh/Z3ksSgKMgTXV/amZvjBm2xuwWRA==</SignatureValue><KeyInfo><wsse:SecurityTokenReference xmlns=""><wsse:Reference URI="#SecurityToken-c2c21702-6a35-4b37-a7fc-77b7ac14600f" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"/></wsse:SecurityTokenReference></KeyInfo></Signature></wsse:Security></soapenv:Header><soapenv:Body wsu:Id="Body-1914356d-0bf8-45dd-b2a6-77b7ac146dd9" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><ns2:updateResponse xmlns:ns2="http://edt.health.ontario.ca/" xmlns:ns3="http://ebs.health.ontario.ca/" xmlns:ns4="http://idp.ebs.health.ontario.ca/"><xenc:EncryptedData Id="G0x7f79ea188320-46D" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"><xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/><xenc:CipherData><xenc:CipherValue>XUGbA75TNbKfin8nqnytaC6zqLtY57SYrrW/MxPZBbpEmx+Jc3Iwv4XmBrqhaQaP3gxyE7TK45pTSakwBurZQvit6SA/VnEI+1vC7Xyc7jEIY4HMA4lcXCO8z4NRFWYs/7LnOu2G0rRfQxtDwFnkK04stqxODzVBA8aXeWzZEJ4AkZ+EirDJTZ0BQkfUCm4RXy9l3ddZOG1TwJuA/nGmhBP35T8uAwlNTaAsyzneZvYmQiF671ha/aXzOrRkGfoHOawcjEZn3T8hA69aKXgy/aRFaCi5VEZWD3bpkz8jGXaGNzvTT1d7VAQDpNbEpqZjgmcxasJ3M+RyghMRl7/mSF1Jn3HkKS9M5qu8Bf4MThD2LArq+DsBfSnXbtkJL/U0TavyepUyKdXKJu0TzG/e91MHOIeyYnVysEAo0HEDPr73RVpguBq5ntAImZFBO52k4vjG1wNNbLeQxClGMpKru90o0Cmr0/1tDGMwqg4m9MME7DHe+H9pSefyllsyUzhNEbTrCobdw9kC8vjK+SfJhOsEf3pyLCwa/v2bdu9mliDn9ONOuYq5HoBnW8WdFU2TUQTGSjZ5B8EMe2Ob3i7/W5bcSQfCawm78/b6LSQ82VmIjEDhxRsnu9h4Gs04ba0vvdKy4GCZnoabReLmh/vtBq7W/twAep6p7yTgOevGBRxk3V/rT10E0/OVzzSX0nNQ09BCmpaULQ0vu8bv7UIB7/H3RqqccvxVZQ0u6h/cLjdL6ES0iHRnb0/VLZ9at8fN</xenc:CipherValue></xenc:CipherData></xenc:EncryptedData></ns2:updateResponse></soapenv:Body></soapenv:Envelope>

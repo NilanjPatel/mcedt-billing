@@ -1,0 +1,382 @@
+{'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'multipart/related; type="application/xop+xml"; start="<rootpart@soapui.org>"; start-info="text/xml"; boundary="----=Boundary_a7158460f49994dc18a9b2b7eb255d62"', 'MIME-Version': '1.0', 'Content-Length': '23897'}
+
+------=Boundary_a7158460f49994dc18a9b2b7eb255d62
+Content-Type: application/xop+xml; charset=UTF-8; type="text/xml"
+Content-Transfer-Encoding: 8bit
+Content-ID: <rootpart@soapui.org>
+
+<soapenv:Envelope
+xmlns:ebs="http://ebs.health.ontario.ca/"
+xmlns:edt="http://edt.health.ontario.ca/"
+xmlns:idp="http://idp.ebs.health.ontario.ca/"
+xmlns:msa="http://msa.ebs.health.ontario.ca/"
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+<soapenv:Header>
+<wsse:Security
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+<wsse:BinarySecurityToken EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" wsu:Id="X509-4A6564966742022D8B170319672914254">MIICcjCCAdugAwIBAgIII44ODmyZSbYwDQYJKoZIhvcNAQELBQAwajELMAkGA1UEBhMCQ0ExEDAOBgNVBAgTB09udGFyaW8xFDASBgNVBAcTC1NjYXJib3JvdWdoMQswCQYDVQQKEwJORDESMBAGA1UECxMJTkQgSGVhbHRoMRIwEAYDVQQDEwlORCBIZWFsdGgwHhcNMjUxMDI0MTcwNTIxWhcNNDUxMDE5MTcwNTIxWjBqMQswCQYDVQQGEwJDQTEQMA4GA1UECBMHT250YXJpbzEUMBIGA1UEBxMLU2NhcmJvcm91Z2gxCzAJBgNVBAoTAk5EMRIwEAYDVQQLEwlORCBIZWFsdGgxEjAQBgNVBAMTCU5EIEhlYWx0aDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAj4e/WyqYdREUvX2vlKZw9dxxOdKtjfKeqD3xf203SzWPU7KEzcJEgkLSPySzTHxoQf8irviPkBbDR4lEIn3uGHvOMVme3IPWPzBOLuLgvKkU+wGtOLzVmUtM4XvPnYtBLMBtXfb6xnSdp+3FBrn4+cTDMJOHAc6zuUM+hM5jH8MCAwEAAaMhMB8wHQYDVR0OBBYEFNVbLyOE9SSH+E4Ti2bzeuBToiSLMA0GCSqGSIb3DQEBCwUAA4GBACjA4NQYae6yUsW0OxWf+fqeI0r9pt60BOUoDBGEqh292XDQvSUpB1n5zYhbk7xEoKJ6N3tOhfvS7bkWdMEhc59MyC+OmUfcTbVWMURiyJmpDLkts1Y4Q7g8lj2NvwDjkGYYmH2K67c/5SSaGe4yEnthI9UdSQPQ99w2ysU7fTQ8</wsse:BinarySecurityToken>
+<wsse:UsernameToken wsu:Id="UsernameToken-2">
+      <wsse:Username>confsu+412@gmail.com</wsse:Username>
+      <wsse:Password 
+      Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Password77!!</wsse:Password>
+  </wsse:UsernameToken>
+<wsu:Timestamp wsu:Id="TS-1">
+    <wsu:Created>2025-11-04T15:56:18.369Z</wsu:Created>
+    <wsu:Expires>2025-11-04T16:06:18.369Z</wsu:Expires>
+  </wsu:Timestamp>
+<ds:Signature Id="SIG-6" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:SignedInfo>
+  <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+    <ec:InclusiveNamespaces PrefixList="ebs edt idp msa soapenv wsu"
+    xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+  </ds:CanonicalizationMethod>
+  <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <ds:Reference URI="#TS-1">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="ebs edt idp msa"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>5lR/FY2IJYVoNQZGDMIEtedZbo10y6xLxDhj45iCxfc=</ds:DigestValue>
+  </ds:Reference>
+  <ds:Reference URI="#UsernameToken-2">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="wsse ebs edt idp msa soapenv"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>Rn6yTC7jF3t4QrjN4Ku7AtrLiUvSAcdwh0vU3TVXDrg=</ds:DigestValue>
+  </ds:Reference>
+  <ds:Reference URI="#id-3">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="ebs edt msa soapenv"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>XKHQ1WVubFESs2oqQww4ZVAU/4Orq630wpYUvjZvNcQ=</ds:DigestValue>
+  </ds:Reference>
+  <ds:Reference URI="#id-4">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="edt idp msa soapenv"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>n8wa+a++VsPyZmmcQA9KqoDbxkctxyV6RlTvNvJTSr8=</ds:DigestValue>
+  </ds:Reference>
+  <ds:Reference URI="#id-5">
+    <ds:Transforms>
+      <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+        <ec:InclusiveNamespaces PrefixList="ebs edt idp msa soapenv"
+        xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      </ds:Transform>
+    </ds:Transforms>
+    <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <ds:DigestValue>SbNiBTUHeGAnI4LhNWevPkx23A6BsHinrt6dE/kn2OY=</ds:DigestValue>
+  </ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+DA3o272Xa4/dkZQ6eIDpc5kj2JGgoacjV1tUBIePL3zCfKYRn+uQNeTMe8I7UqU2pQ6NECu/CdSV4LNFbl49/reC2mnspGsAhDYtlFQsCxq8qefPUNYgc26iUGUCRi2TUnOk2OYaJG/x/Tdppj+74PveVjVblyzlx8zXFnTh11w=
+</ds:SignatureValue>
+<ds:KeyInfo Id="KI-4A6564966742022D8B170319672914255">
+  <wsse:SecurityTokenReference wsu:Id="STR-4A6564966742022D8B170319672914256">
+    <wsse:Reference URI="#X509-4A6564966742022D8B170319672914254" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"/>
+  </wsse:SecurityTokenReference>
+</ds:KeyInfo>
+</ds:Signature>
+</wsse:Security>
+<idp:IDP wsu:Id="id-3">
+    <ServiceUserMUID>619700</ServiceUserMUID>
+  </idp:IDP>
+<ebs:EBS wsu:Id="id-4">
+      <SoftwareConformanceKey>0da8cda1-db02-4b8b-9425-f6e42c2548fa</SoftwareConformanceKey>
+      <AuditId>2bff0a98-fd48-4d79-9152-033bc2d17f24</AuditId>
+  </ebs:EBS>
+</soapenv:Header>
+<soapenv:Body wsu:Id="id-5">
+              <edt:upload>
+                 <!--1 to 5 repetitions:-->
+                 <upload>
+                    <content>
+                      <inc:Include href="cid:MCEDT_Upload_Files/january.txt" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                    </content>
+                    <!--Optional:-->
+                    <description>MCEDT_Upload_Files/january.txt</description>
+                    <resourceType>SDC</resourceType>
+                 </upload>
+                 <upload>
+                    <content>
+                      <inc:Include href="cid:MCEDT_Upload_Files/feb.txt" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                    </content>
+                    <!--Optional:-->
+                    <description>MCEDT_Upload_Files/feb.txt</description>
+                    <resourceType>SDC</resourceType>
+                 </upload>
+                 <upload>
+                    <content>
+                      <inc:Include href="cid:MCEDT_Upload_Files/march.txt" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                    </content>
+                    <!--Optional:-->
+                    <description>MCEDT_Upload_Files/march.txt</description>
+                    <resourceType>SDC</resourceType>
+                 </upload>
+                 <upload>
+                    <content>
+                      <inc:Include href="cid:MCEDT_Upload_Files/may.txt" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                    </content>
+                    <!--Optional:-->
+                    <description>MCEDT_Upload_Files/may.txt</description>
+                    <resourceType>SDC</resourceType>
+                 </upload>
+                 <upload>
+                    <content>
+                      <inc:Include href="cid:MCEDT_Upload_Files/april.txt" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                    </content>
+                    <!--Optional:-->
+                    <description>MCEDT_Upload_Files/april.txt</description>
+                    <resourceType>SDC</resourceType>
+                 </upload>
+              </edt:upload>
+            </soapenv:Body>
+</soapenv:Envelope>
+------=Boundary_a7158460f49994dc18a9b2b7eb255d62
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Content-ID: <MCEDT_Upload_Files/january.txt>
+Content-Disposition: attachment; name="MCEDT_Upload_Files/january.txt"
+
+HEBV03F202510310002      BAC803726200                                          
+HEH1743809152JW1935081700381831HCPP                                            
+HETA007A  0042900120250123009                                                  
+HEE0001000000001                                                               HEBV03F202510310006      BAC804755900                                          
+HEH3513389704PT2003040500381819HCPP                                            
+HETA888A  0042900120250114289                                                  
+HEE0001000000001                                                               HEBV03F202510310012      BAC805063600                                          
+HEH3108241302KJ1999031200381815HCPP                                            
+HETA007A  0042900120250106461                                                  
+HEH7042540083GD1981091800381832HCPP                                            
+HETA007A  00429001202501202251                                                 
+HEH5913092762WV1999112900381816HCPP                                            
+HETA007A  0042900120250122                                                     
+HEE0003000000003                                                               HEBV03F202510310014      BAC804409300                                          
+HEH5692020117JV2022051800381814HCPP                                            
+HETA001A  0026850120250109009                                                  
+HEH6508877104BF1993080900381817HCPP                                            
+HETA007A  0042900120250114151                                                  
+HEH2707559320NA1969041800381821HCPP                                            
+HETA003A  0098750120250123175                                                  
+HEE0003000000003                                                               HEBV03F202510310016      BAC804652900                                          
+HEH9783330328FC1997052400381822HCPP                                            
+HETK013A  0079250120250121307                                                  
+HEH4848073799MB1966040100381820HCPP                                            
+HETA007A  0042900120250122455                                                  
+HEE0002000000002                                                               
+
+------=Boundary_a7158460f49994dc18a9b2b7eb255d62
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Content-ID: <MCEDT_Upload_Files/feb.txt>
+Content-Disposition: attachment; name="MCEDT_Upload_Files/feb.txt"
+
+HEBV03F202510310002      BAC803726200                                          
+HEH9783330328FC1997052400381823HCPP                                            
+HETA007A  0042900120250205799                                                  
+HEH6285359854YP1998111200381835HCPP                                            
+HETA003A  0098750120250219285                                                  
+HEE0002000000002                                                               HEBV03F202510310005      BAC803428800                                          
+HEH8475622562BB1995122300381834HCPP                                            
+HETA007A  0042900120250214799                                                  
+HEH9783330328FC1997052400381824HCPP                                            
+HETA007A  0042900120250218232                                                  
+HEE0002000000002                                                               HEBV03F202510310016      BAC804652900                                          
+HEH9385847943FT1952010500381836HCPP                                            
+HETA001A  0026850120250207141                                                  
+HEE0001000000001                                                               
+
+------=Boundary_a7158460f49994dc18a9b2b7eb255d62
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Content-ID: <MCEDT_Upload_Files/march.txt>
+Content-Disposition: attachment; name="MCEDT_Upload_Files/march.txt"
+
+HEBV03F202511040005      BAC803428800                                          
+HEH2418385924XL1982042500381859HCPP                                            
+HETA007A  0042900120250311180                                                  
+HEH5618511009VB1972101700381850HCPP                                            
+HETK030A  0045850120250314401                                                  
+HEH2734500248EF1958060100381864HCPP                                            
+HETA007A  0042900120250314844                                                  
+HEH1516535141AP1998100400381861HCPP                                            
+HETA007A  0042900120250319460                                                  
+HEH9366347384MN1969071700381860HCPP                                            
+HETA007A  0042900120250320831                                                  
+HETK301A  0000000120250320831                                                  
+HEH6102173462XR1988111000381862HCPP                                            
+HETA007A  0042900120250327455                                                  
+HEH1233204567FW1952060100381863HCPP                                            
+HETA007A  0042900120250327272                                                  
+HEE0007000000008                                                               HEBV03F202511040006      BAC804755900                                          
+HEH7804903784XC1984101600381882HCPP                                            
+HETA007A  0042900120250311895                                                  
+HEH7870116642NB2000102500381873HCPP                                            
+HETA007A  0042900120250312                                                     
+HETG845A  0006100120250312                                                     
+HEH7870116642NB2000102500381884HCPP                                            
+HETA007A  0042900120250312799                                                  
+HEH3678629662JN1987120500381881HCPP                                            
+HETA003A  0098750120250313380                                                  
+HEH2482936107KK1959010100381867HCPP                                            
+HETA007A  0042900120250314781                                                  
+HEH1009746759GB2025020300381870HCPP                                            
+HETA007A  0042900120250317896                                                  
+HEH9358687474WY2024122700381858HCPP                                            
+HETA007A  0042900120250318307                                                  
+HEH4282201799AR2024111900381876HCPP                                            
+HETA003A  0098750120250318896                                                  
+HEH8108821045KG2017071000381880HCPP                                            
+HETA007A  0042900120250318269                                                  
+HEH4785152606CR1996102100381868HCPP                                            
+HETA003A  0098750120250319232                                                  
+HEH5739608320YV1974051400381869HCPP                                            
+HETA007A  0042900120250319373                                                  
+HEH5487952060FA1993061000381874HCPP                                            
+HETA007A  0042900120250319847                                                  
+HEH4043311549KY1964111100381883HCPP                                            
+HETA007A  0042900120250319174                                                  
+HEH5871991161EE1962121500381872HCPP                                            
+HETA007A  0042900120250320401                                                  
+HEH6971504664HA1984042400381865HCPP                                            
+HETA003A  0098750120250325244                                                  
+HEH6028220744RA1988071400381871HCPP                                            
+HETA007A  0042900120250326280                                                  
+HEH5010826344HG1997083000381875HCPP                                            
+HETA007A  0042900120250326650                                                  
+HEH6755160725HC1998013100381879HCPP                                            
+HETA007A  0042900120250326650                                                  
+HEH3728180369BH1993082600381878HCPP                                            
+HETA007A  0042900120250327626                                                  
+HEH9428777313TP2024030100381866HCPP                                            
+HETA007A  0042900120250328460                                                  
+HEH5528285983EX1965070100381877HCPP                                            
+HETA007A  0042900120250328189                                                  
+HEE0021000000022                                                               
+
+------=Boundary_a7158460f49994dc18a9b2b7eb255d62
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Content-ID: <MCEDT_Upload_Files/may.txt>
+Content-Disposition: attachment; name="MCEDT_Upload_Files/may.txt"
+
+HEBV03F202511040006      BAC804755900                                          
+HEH7209621924YW2008010100381904HCPP                                            
+HETA007A  0037950120250514706                                                  
+HEH4988556207AR1992091800381917HCPP                                            
+HETA007A  0037950120250516847                                                  
+HEE0002000000002                                                               
+
+------=Boundary_a7158460f49994dc18a9b2b7eb255d62
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Content-ID: <MCEDT_Upload_Files/april.txt>
+Content-Disposition: attachment; name="MCEDT_Upload_Files/april.txt"
+
+HEBV03F202511040006      BAC804755900                                          
+HEH2136833809EE1992111500381891HCPP                                            
+HETA007A  0037950120250409626                                                  
+HEH2701763829VB1983080100381916HCPP                                            
+HETA007A  0037950120250411219                                                  
+HEH9553449308CL1955061400381890HCPP                                            
+HETA007A  0037950120250415185                                                  
+HEH9080209241VC1998073000381894HCPP                                            
+HETA007A  0037950120250415650                                                  
+HEH5093160124EM1996021800381898HCPP                                            
+HETK013A  0070100120250415650                                                  
+HEH2328829789KH1957071100381885HCPP                                            
+HETA007A  0037950120250416530                                                  
+HEH1349704922LV1947092100381886HCPP                                            
+HETA007A  0037950120250416786                                                  
+HEH2136833809EE1992111500381892HCPP                                            
+HETA007A  0037950120250416626                                                  
+HEH6306570943VF2000091800381895HCPP                                            
+HETA007A  0037950120250416895                                                  
+HEH7572101389EJ1976032400381902HCPP                                            
+HETA007A  0037950120250416799                                                  
+HEH1600035867HJ1999082800381903HCPP                                            
+HETA007A  0037950120250416346                                                  
+HEH6755160725HC1998013100381910HCPP                                            
+HETA007A  0037950120250416650                                                  
+HEH6755160725HC1998013100381911HCPP                                            
+HETA007A  0037950120250416650                                                  
+HEH1257311769JL1956030100381913HCPP                                            
+HETA007A  0037950120250416733                                                  
+HEH7571398242PL1993121800381896HCPP                                            
+HETA007A  0037950120250417256                                                  
+HEH9915365721JM1997010200381908HCPP                                            
+HETA007A  0037950120250417232                                                  
+HEH4213591623LB1996050500381897HCPP                                            
+HETA007A  0037950120250418272                                                  
+HEH6874258160NL1990020300381909HCPP                                            
+HETK013A  0070100120250418269                                                  
+HEH5786184670AD1951042900381912HCPP                                            
+HETA007A  0037950120250418250                                                  
+HEH6241520201TH1991120700381915HCPP                                            
+HETA007A  0037950120250418831                                                  
+HEH6148995902BE1978011500381887HCPP                                            
+HETA007A  0037950120250422250                                                  
+HEH9819406977DE2024040500381907HCPP                                            
+HETA007A  0037950120250422896                                                  
+HEH2047717323FX1991120300381888HCPP                                            
+HETA007A  0037950120250423650                                                  
+HEH6644233717DE2025032400381889HCPP                                            
+HETA007A  0037950120250423799                                                  
+HEH6806753569GE1991042300381893HCPP                                            
+HETK030A  0040550120250423249                                                  
+HEH5423182327XF1995021600381901HCPP                                            
+HETA007A  0037950120250423269                                                  
+HEH6114736967YH1967010100381905HCPP                                            
+HETA007A  0037950120250423616                                                  
+HEH6114736967YH1967010100381906HCPP                                            
+HETA007A  0037950120250423616                                                  
+HEH7045719981XK1987062500381899HCPP                                            
+HETA007A  0037950120250424242                                                  
+HEH7463974365NW1974100900381914HCPP                                            
+HETK030A  0040550120250424250                                                  
+HEH5774002124FP2010072800381900HCPP                                            
+HETA007A  0037950120250425896                                                  
+HETG847A  0005400120250425896                                                  
+HEE0031000000032                                                               
+
+------=Boundary_a7158460f49994dc18a9b2b7eb255d62--
+
+
+{'X-Backside-Transport': 'OK OK,OK OK', 'Connection': 'Keep-Alive', 'Transfer-Encoding': 'chunked', 'X-Powered-By': 'Servlet/3.0', 'Content-Type': 'text/xml', 'Content-Language': 'en-CA', 'Date': 'Tue, 04 Nov 2025 15:56:18 GMT', 'X-Global-Transaction-ID': 'f466f0b1690a2222092838e1'}
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><xenc:EncryptedKey xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"><xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-1_5" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"/><dsig:KeyInfo xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><wsse:SecurityTokenReference><wsse:KeyIdentifier ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509SubjectKeyIdentifier" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">1VsvI4T1JIf4ThOLZvN64FOiJIs=</wsse:KeyIdentifier></wsse:SecurityTokenReference></dsig:KeyInfo><xenc:CipherData xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><xenc:CipherValue>VC0bu8ez6/2v71LBXXTavoxZi87a16UBWmfhfp+imzUN1oTdPzpaFnAHGUwnIPWZOJsCRKTqJQ/eWickdIh+YqPA//7qYtDmOw6QRi0p/5k/Px2N0iOz5C7bduTUrqgJKq2fHVDqZYX8n0pkhAx2FvSTXM+Qgpqb4jYVQ3ZSK24=</xenc:CipherValue></xenc:CipherData><xenc:ReferenceList><xenc:DataReference URI="#G0x7f939ee5e320-46D"/></xenc:ReferenceList></xenc:EncryptedKey><wsu:Timestamp wsu:Id="Timestamp-358ddcaa-aa9c-463d-9d3d-b1f066f432c1" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><wsu:Created>2025-11-04T15:56:19Z</wsu:Created><wsu:Expires>2025-11-04T16:01:19Z</wsu:Expires></wsu:Timestamp><wsse:BinarySecurityToken wsu:Id="SecurityToken-c077841e-18a6-4a27-bc51-b1f066f435cb" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">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</wsse:BinarySecurityToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+  <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+  <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+  <Reference URI="#Timestamp-358ddcaa-aa9c-463d-9d3d-b1f066f432c1">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>hhwGHMG/qkFX6OKqZ7dTDAohWGE=</DigestValue>
+  </Reference>
+  <Reference URI="#Body-ff3c54ba-eac8-4358-adf9-b1f066f40ed5">
+    <Transforms>
+      <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+    </Transforms>
+    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <DigestValue>qlJj6XZTJlv7UXseyraeuoRuBUs=</DigestValue>
+  </Reference>
+</SignedInfo>
+    <SignatureValue>rTbOhsuiJtu0zmk407tlmISQ3pGBGSpAT6z3+eJ/yeHYCkiNjKS5hB0oUdvH8h4SK5cbLGQH4gZmRn+pKFXakq6MGJ+7iDDYfMIss/vYH6KqJuSrsP4l46G8lzEivof3ndNMVUnEn8ZuMv0RfGTCy8UrqPbufotBSEop1W81l1RERK5ng+IUHuPaAL1iojF0dclXLgzfU9BXBpD2UFHsrOJDqT6WXEEy8EhJP2L0+3rkzybgeXm/QlYc9TqJM1FySNimk8U0n4SXgekZ5XRNm3bd8nHcNALAY4KiFNxjjQ72Ql8zxkpmzUtWjtokAdMy+JdHw70nUMUFhoK2xEpEpg==</SignatureValue><KeyInfo><wsse:SecurityTokenReference xmlns=""><wsse:Reference URI="#SecurityToken-c077841e-18a6-4a27-bc51-b1f066f435cb" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"/></wsse:SecurityTokenReference></KeyInfo></Signature></wsse:Security></soapenv:Header><soapenv:Body wsu:Id="Body-ff3c54ba-eac8-4358-adf9-b1f066f40ed5" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><ns2:uploadResponse xmlns:ns2="http://edt.health.ontario.ca/" xmlns:ns3="http://ebs.health.ontario.ca/" xmlns:ns4="http://idp.ebs.health.ontario.ca/"><xenc:EncryptedData Id="G0x7f939ee5e320-46D" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"><xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/><xenc:CipherData><xenc:CipherValue>cOhVzJL8xtcUTcj6AMTLH435DpLQbXYpPK76F1jLoYdcYnWh2RLFsdvZWNU+S6hjfmaoootXBcr7W4qzgXfA51o4txBOylbdMf4V/xK9Bpjwuq5CkYHutswJ/TE0AogT5RIQIrgQ0rHzA52v5JbJunGUdov5ORFJtqw7sWfM3dr07xAUFzroSczz7vb7iWC6pOG6pTeY8cE7yOeCqTEyg1ndPvz7uh5dy1Iw8O1IHmgUi5fXHs2NsFnK1Z43smhb+UUymWVSv6v8Jgj94A5oulkBatb9Kvhx26zReOVjQE6emTTpK4JGs4onqkRXNld0P1jiJBDgRz9R+UkniOuZrFf6Hu/NwmzDZaXX0LfCamiJbN8v3ZBHmh7TnmLfcqdhA2RS8KMmrbk3aa6F9Fz9Ek0crAZ+m9BigqxdzOJe4044mUdzKNFYWkMoj4/vDxt1RQzTdNFgMcUeKjHGw4jvIblf7gviG4fd4M8kb0uskA5iCR1dkty0SaJsAzz0Y4Cxxm3dEEmT+gw1uNLks8d0h4m8wCH7LDPcAQvyy6l9GUARx8mGAsyPQeU8bUg7craDU0PbQsAJmahDji5dlzWlnJHUzGEKGNqlHO9hyad2UgTo5gu1iE1kMUW5auS6TerBg9I6kU3TDqdwIhH27XlA/DnEiJl8mFTO3DCJ/Fg7dZqQ4gIMC5HTRr3jlR329Hxp5y5dU9B5H2xWObAQT9Ly7z0pmig162B0aOpgw6DiRJ64USgwuLNXXgrO9FXBfVZWID00VjLr9h9q8ansVc+9hVjl7FTu5dozBxjTowGABpbjP1iWoD+6FQreehOOk26Mzfs4JGbDK9JD8wWukdydWVJCVoS/63X6NDY5qdQtnO/Lz0/+9F0qdzX2fTLbS+cAgLFpn84nEVEEmZ0dJ59Q4puR97JHYMDcsiEsn/gUrne9akUTVOGSml6W9Biq9NcZqFeU7oW+uFejkUFRe76e5Iz34AhHJyoB2iaN1WP4i/oIMtIzGIbBmSwtGRH6rouSr2UqC+bLxZ0jSpjSmegizOy2XyAwhgGpWtx85tzeCudioDISKyxKV0iXhldxzbYXcgcL7b5ppxEnz0LN/O89/7j5/mL4YMszuxc95SQO55W5SlGkM8YgVDYc5uKeA0OQrMChxzLcZprrlCIKy06N+H2YqCFAZtI2e8AI1vPZ1oVhASOF1J2xtBTDFEHJ66um/WzGarNpPhUh+ZiMzwRmGmXjIUdWaifMaS1u0MZMtWVA9f418OPHkUfOquLt2K81aDhW0QM2Kkvc3HXHEj6Xbvd9VKkOuw8n0I+cURwMHytr6gTc+frrf7rbZNTE5UnGgykScJ1j2fDQc6gBEc+f7Qi0IA2SwkO/bi+LFEqHNKuNZngdFUFlbAnF4lcmJ+Q4TzUB/upcjmarZKIJhjLgiuouKOaOlyZxEIWhQJb8q3bLPfQzC3H+eyyVQeCW/6zKvy/tPXB2Q/RqbKYaZPfxrqv2EiPzUOmuuJmbFTX3EZp9C1jsLN7oREixrgtoiQg4aZSUzz1NKCkoubncChsXsG8fvJUt3td5tg4UeC2qFc94qIboSNDvjQRqdf+y1OzR1NKdOCqKUpX1iLpwyfh5u92XkVf1fe4Wx1TOsWeQgDC1Qb0Z1MpSCA35xM4EWFRg6t/XFzZuZXNS9Od+MHVj5FdK4wjvy+9i5wxn2gwK/9Dmzqer0mdXaVwBj7T1ewDv0E/dDu0xC9L1y/Zl/+8Q2kNhwFDJa2533gd109WDstA=</xenc:CipherValue></xenc:CipherData></xenc:EncryptedData></ns2:uploadResponse></soapenv:Body></soapenv:Envelope>

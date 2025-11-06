@@ -20,10 +20,17 @@ load_dotenv("local.env")
 # Initialize with input parameters to this API
 method = "download"
 # method = "getTypeList"
+<<<<<<< HEAD
 directory = "MCEDT_DOWNLOAD_SAMPLES"
 file_to_process1="CLAIM FILE1 (copy).txt"
 claimfile = f'{directory}/{file_to_process1}'
 current_number='7.10'
+=======
+directory = "MCEDT_Upload_Files"
+file_to_process1="OBECFILE.txt"
+claimfile = f'{directory}/{file_to_process1}'
+current_number='1.7'
+>>>>>>> origin/main
 responseFile = f'results/{current_number}_{directory}_{file_to_process1}'
 responseFile=responseFile.replace(".txt",".xml")
 responseFile=responseFile.replace(".blob",".xml")
@@ -36,7 +43,7 @@ resourceID5 = "95527"
 resourceID6 = "95656"
 resourceID7 = "95657"
 
-file_to_process2="large_claim_file_vendor.txt"
+file_to_process2="Stale_Dated_Claim_File.txt"
 file_to_process3="MOH_LARGE_CLAIMS.TXT"
 file_to_process4="HGBAC8.001"
 file_to_process5="HJBAC8.005"
@@ -48,7 +55,13 @@ claimfile5 = f'{directory}/{file_to_process5}'
 claimfile6 = f'{directory}/{file_to_process6}'
 
 # For list method
+<<<<<<< HEAD
 resourceType = 'CL'  # OPTIONAL can leave empty
+=======
+resourceType = 'OB'  # OPTIONAL can leave empty
+resourceType2 = 'SDC'  # OPTIONAL can leave empty
+resourceType3 = 'CL'  # OPTIONAL can leave empty
+>>>>>>> origin/main
 # CL, BE, ER, ES, RA, RS, PSP, GCM
 # ref getTypeList method's server response
 resourceStatus = 'UPLOADED'
@@ -95,9 +108,7 @@ def loadbody() -> str:
     elif method == 'upload':
         rawbody = f"""
             <soapenv:Body wsu:Id="id-5">
-            
               <edt:upload>
-              
                  <!--1 to 5 repetitions:-->
                  <upload>
                     <content>
@@ -107,8 +118,22 @@ def loadbody() -> str:
                     <description>{claimfile}</description>
                     <resourceType>{resourceType}</resourceType>
                  </upload>
-
-            
+                 <upload>
+                    <content>
+                      <inc:Include href="cid:{claimfile2}" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                    </content>
+                    <!--Optional:-->
+                    <description>{claimfile2}</description>
+                    <resourceType>{resourceType2}</resourceType>
+                 </upload>
+                 <upload>
+                    <content>
+                      <inc:Include href="cid:{claimfile3}" xmlns:inc="http://www.w3.org/2004/08/xop/include" />
+                    </content>
+                    <!--Optional:-->
+                    <description>{claimfile3}</description>
+                    <resourceType>{resourceType3}</resourceType>
+                 </upload>
               </edt:upload>
             </soapenv:Body>
         """

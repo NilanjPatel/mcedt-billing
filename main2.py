@@ -19,17 +19,17 @@ import io
 load_dotenv("local.env")
 
 # Initialize with input parameters to this API
-method = "download"
+method = "update"
 # method = "getTypeList"
 directory = "MCEDT_Upload_Files"
 file_to_process1 = "CLAIM FILE.txt"
 claimfile = f'{directory}/{file_to_process1}'
-current_number = '4.8'
+current_number = '7.10'
 responseFile = f'results/{current_number}_{directory}_{file_to_process1}'
 responseFile = responseFile.replace(".txt", ".xml")
 responseFile = responseFile.replace(".blob", ".xml")
 responseFile = responseFile.replace(file_to_process1.split(".")[1], ".xml")
-resourceID = "90253"
+resourceID = "95672"
 resourceID2 = "95284"
 resourceID3 = "90242"
 resourceID4 = "95654"
@@ -94,9 +94,7 @@ def loadbody() -> str:
     elif method == 'upload':
         rawbody = f"""
             <soapenv:Body wsu:Id="id-5">
-
               <edt:upload>
-
                  <!--1 to 5 repetitions:-->
                  <upload>
                     <content>
@@ -106,8 +104,6 @@ def loadbody() -> str:
                     <description>{claimfile}</description>
                     <resourceType>{resourceType}</resourceType>
                  </upload>
-
-
               </edt:upload>
             </soapenv:Body>
         """

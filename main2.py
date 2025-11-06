@@ -21,7 +21,7 @@ load_dotenv("local.env")
 # Initialize with input parameters to this API
 method = "download"
 # method = "getTypeList"
-directory = "MCEDT_DOWNLOAD_SAMPLES"
+directory = "MCEDT_Upload_Files"
 file_to_process1 = "CLAIM FILE.txt"
 claimfile = f'{directory}/{file_to_process1}'
 current_number = '4.8'
